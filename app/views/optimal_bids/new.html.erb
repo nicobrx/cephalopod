@@ -1,0 +1,27 @@
+<%= render 'shared/error_messages' %>
+<div class="box">
+<%= form_for(@optimal_bid) do |f| %>
+  <div class="field">
+  	<div><%= f.label :conversions %></div>
+  	<%= f.text_field :conversions, :value => number_with_delimiter(f.object.conversions)  %>
+  </div>  
+  <div class="field">
+    <div><%= f.label :clicks %></div>
+    <%= f.text_field :clicks, :value => number_with_delimiter(f.object.clicks)  %>
+  </div>
+  <div class="field">
+    <div><%= f.label :cpa, "Target CPA" %></div>
+    <%= f.text_field :cpa, :value => number_to_currency(f.object.cpa) %>
+  </div>
+  <div class="field">
+    <div><%= f.label :confidence_percent, "Confidence Percent" %></div>
+    <%= f.radio_button :confidence_percent, "0.8" %> 80%  |  
+	<%= f.radio_button :confidence_percent, "0.9" %> 90%  |  
+	<%= f.radio_button :confidence_percent, "0.95" %> 95%  |  
+	<%= f.radio_button :confidence_percent, "0.99" %> 99%
+  </div>
+  <div class="actions">
+    <%= f.submit "Calculate" %>  <%= link_to "Start Over", calculator_path %>
+  </div>
+<% end %>
+</div>

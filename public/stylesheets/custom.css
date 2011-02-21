@@ -1,0 +1,162 @@
+.container {
+  width: 710px;
+}
+
+body {
+  background: 		#C2EBFF;
+}
+
+header {
+  padding-top: 20px;
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 150%;
+}
+
+/* form */
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+.field_with_errors {
+  margin-bottom: 0px;
+  padding: 0px;
+  display: block;
+  clear: both;
+}
+
+.field_with_errors label {
+  color: red;
+  padding: 0em;
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
+#error_explanation {
+  width: 400px;
+  padding: 2em;
+  margin-top:10px;
+  margin-bottom: 0px;
+  background-color: #f0f0f0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: red;
+}
+
+#error_explanation p {
+  margin-bottom: 0;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+}
+
+nav {
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
+}
+
+.box {
+  background-color: #FFE6B2;
+  padding: 2em;
+  white-space: nowrap;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  width: 400px;
+  -moz-border-radius:    8px;
+  -webkit-border-radius: 8px;
+  border-radius:         8px;
+}

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bid_lower: 1
+  bid_upper: 1
+  conversions: 1
+  clicks: 1
+  cpa: 1
+  confidence_percent: 1
+
+two:
+  bid_lower: 1
+  bid_upper: 1
+  conversions: 1
+  clicks: 1
+  cpa: 1
+  confidence_percent: 1

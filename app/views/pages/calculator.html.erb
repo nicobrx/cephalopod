@@ -1,0 +1,27 @@
+<div class="box">
+<%= form_for(@optimal_bid) do |f| %>
+  <div class="field">
+  	<%= f.label :conversions %><br />
+  	<%= f.text_field :conversions %>
+  </div>  
+  <div class="field">
+    <%= f.label :clicks %><br />
+    <%= f.text_field :clicks %>
+  </div>
+  <div class="field">
+    <%= f.label :cpa, "Target CPA" %><br />
+    <%= f.text_field :cpa %>
+  </div>
+  <div class="field">
+    <%= f.label :confidence_percent, "Confidence Percent" %><br />
+    <%= f.radio_button :confidence_percent, "0.8", {:checked => true} %> 80%  |  
+	<%= f.radio_button :confidence_percent, "0.9" %> 90%  |  
+	<%= f.radio_button :confidence_percent, "0.95" %> 95%  |  
+	<%= f.radio_button :confidence_percent, "0.99" %> 99%
+  </div>
+  <div class="actions">
+    <%= f.submit "Calculate" %>
+  </div>
+<% end %>
+</div>
+

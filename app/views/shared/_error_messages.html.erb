@@ -1,0 +1,11 @@
+<% if @optimal_bid.errors.any? %>
+  <div id="error_explanation" class="round">
+    <h2>Please correct the following <%= pluralize(@optimal_bid.errors.count, "error") %>:</h2>
+    <ul>
+    <% @optimal_bid.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
