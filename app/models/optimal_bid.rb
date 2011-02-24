@@ -12,18 +12,15 @@ class OptimalBid < ActiveRecord::Base
   
   
   def clicks=(num)
-    num = num.gsub(/,/,'') if num.is_a?(String)
-    write_attribute(:clicks, num.to_i)
+    self[:clicks] = num.gsub(/,/,'') if num.is_a?(String)
   end
   
   def conversions=(num)
-    num = num.gsub(/,/,'') if num.is_a?(String)
-    write_attribute(:conversions, num.to_i)
+    self[:conversions] = num.gsub(/,/,'') if num.is_a?(String)
   end
   
   def cpa=(num)
-    num = num.gsub('$','') if num.is_a?(String)
-    write_attribute(:cpa, num.to_i)
+    self[:cpa]  = num.gsub('$','') if num.is_a?(String)
   end
   
   private

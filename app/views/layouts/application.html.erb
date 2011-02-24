@@ -5,6 +5,30 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
+<script type="text/javascript">
+function toggle(showHideDiv, showHide2Div) {
+	var ele = document.getElementById(showHideDiv);
+	var ele2 = document.getElementById(showHide2Div);
+	if(ele.style.display == "inline") {
+    		ele.style.display = "none";
+			ele2.style.display = "inline";
+  	}
+	else {
+		ele.style.display = "inline";
+		ele2.style.display = "none";
+	}
+}
+function content_array(contentDiv, content2Div) {
+        if (contentDiv.constructor == Array) {
+                for(i=0; i < contentDiv.length; i++) {
+                     toggle(contentDiv[i], content2Div[i]);
+                }
+        }
+        else {
+               toggle(contentDiv, content2Div);
+        }
+}
+ </script>
 </head>
 <div class="container">
   <%= render 'layouts/header' %>

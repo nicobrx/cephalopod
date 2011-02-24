@@ -21,19 +21,22 @@
 	<%= f.radio_button :confidence_percent, "0.99" %> 99%
   </div>
   <div class="actions">
-    <%= f.submit "Calculate" %>  <%= link_to "Start Over", calculator_path %>
+    <%= f.submit "Calculate" %>  <input type="button" value="Start Over" onClick="location.href='<%= calculator_path %>'">
   </div>
 <% end %>
 </div>
 <div class="box">
-<div><b>Bid: </b>
+
+<div><b>Conversion Rate: </b><br/>
+<span id="verbose1" style="display:none;">Based on the click and conversion data you entered, you can <br/>
+be <%= number_to_percentage(100*@optimal_bid.confidence_percent, :precision => 0) %> sure that your conversion 
+rate is between </span><span id="concise1" style="display:inline;">lower </span><%= number_to_percentage(100*@optimal_bid.conversion_rate_lower, :precision => 1) %><span id="verbose2" style="display:none;"> and <br/></span><span id="concise2" style="display:inline;"> | upper </span><%= number_to_percentage(100*@optimal_bid.conversion_rate_upper, :precision => 1) %><span id="verbose3" style="display:none;">. The direct proportion of conversions to clicks is </span><span id="concise3" style="display:inline;"> | middle </span><%= number_to_percentage(100*@optimal_bid.conversion_rate, 
+:precision => 1) %><span id="verbose4" style="display:none;">, <br/>but this is not an accurate predictor of what your conversion <br/>rate will be</span><span id="concise4" style="display:inline;"></span></div>
+<div><b>Bid: </b><br/>
 	lower <%= number_to_currency(@optimal_bid.bid_lower) %> | 
 	middle <%= number_to_currency(@optimal_bid.bid) %> | 
 	upper <%= number_to_currency(@optimal_bid.bid_upper) %>
 </div>
-<div><b>Conversion Rate: </b>
-	lower <%= number_to_percentage(100*@optimal_bid.conversion_rate_lower, :precision => 1) %> |  
-	middle <%= number_to_percentage(100*@optimal_bid.conversion_rate, :precision => 1) %> | 
-	upper <%= number_to_percentage(100*@optimal_bid.conversion_rate_upper, :precision => 1) %>
-</div>
+
+<input type="button" value="Concise/Verbose" onClick="content_array(['verbose1', 'verbose2', 'verbose3','verbose4'],['concise1', 'concise2', 'concise3','concise4']);"></div>
 </div>
